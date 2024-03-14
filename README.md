@@ -4,21 +4,22 @@ The Newton-Raphson method is an iterative root-finding algorithm used to approxi
 
 Here's a step-by-step explanation of the Newton-Raphson method:
 
-1. **Initialization**: Choose an initial guess \( x_0 \) for the root of the function.
+### Initialization
+1. **Initialization**: Choose an initial guess $( x_0 )$ for the root of the function.
 
 2. **Iteration**: Repeat the following steps until a satisfactory approximation is obtained:
-   - Calculate the next approximation \( x_{n+1} \) using the formula:
-     \[ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \]
-   - Here, \( f(x) \) is the function whose root we are trying to find, and \( f'(x) \) is its derivative.
+   - Calculate the next approximation $( x_{n+1} )$ using the formula:
+     $[ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} ]$
+   - Here, $( f(x) )$ is the function whose root we are trying to find, and $( f'(x) )$ is its derivative.
 
 3. **Stopping Criterion**: The iteration stops when a convergence criterion is met. Common convergence criteria include:
-   - The absolute difference between successive approximations is smaller than a predefined tolerance (epsilon), denoted as \( |x_{n+1} - x_n| < \epsilon \).
-   - The function value at the current approximation is smaller than a predefined tolerance, i.e., \( |f(x_n)| < \epsilon \).
+   - The absolute difference between successive approximations is smaller than a predefined tolerance (epsilon), denoted as $( |x_{n+1} - x_n| < \epsilon )$.
+   - The function value at the current approximation is smaller than a predefined tolerance, i.e., $( |f(x_n)| < \epsilon )$.
    - A maximum number of iterations is reached.
 
 4. **Output**: The final approximation obtained after convergence or after reaching the maximum number of iterations is considered the root of the function.
 
-Explanation of the code:
+### Explanation of the code:
 - The code accepts an integer input from the command line (presumably representing the number whose square root is to be found).
 - It initializes the variable `t` with the input value `c`.
 - Then, it enters a `while` loop where it iteratively refines the approximation of the square root using the Newton-Raphson formula until the condition `abs(t - c / t) > EPSILON` is no longer true.
